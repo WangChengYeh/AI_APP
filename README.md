@@ -2,7 +2,7 @@
 
 ## Overview
 
-AI_APP is a Progressive Web Application (PWA) forked from [AIAW Lite](https://github.com/modelcontextprotocol/awesome-mcp), a lightweight open-source Model Context Protocol (MCP) client with no login requirements. This enhanced version extends the original AIAW Lite capabilities with specialized MCP servers for **STEM education and development workflows**.
+AI_APP is a Progressive Web Application (PWA) forked from [AIAW Lite](https://github.com/NitroRCr/AIaW), a lightweight open-source Model Context Protocol (MCP) client with no login requirements. This enhanced version extends the original AIAW Lite capabilities with specialized MCP servers for **STEM education and development workflows**.
 
 **Target Users: STEM Mobile Learning & Development**
 - **Science**: Data analysis, statistical modeling, scientific computing on smartphones
@@ -55,6 +55,15 @@ The app transforms smartphones into powerful STEM development environments, enab
 - **Script Execution**: Run terminal scripts (.sh, .bat) and command sequences
 - **Output Streaming**: Real-time command output and error handling
 - **Security Isolation**: Sandboxed execution environment for safety
+
+#### (E) MCP Server Development Environment
+- **JavaScript MCP Server Creation**: Build and modify MCP servers in JavaScript within AI_APP
+- **Live Server Testing**: Test custom JavaScript MCP servers instantly without external setup
+- **STEM-Focused Templates**: Pre-built JavaScript MCP server templates for scientific applications
+- **JavaScript Code Generation**: AI-assisted JavaScript MCP server code generation for educational use cases
+- **Server Registry**: Local registry of custom and community JavaScript MCP servers
+- **Hot Reloading**: Modify JavaScript server code and see changes immediately
+- **Integration Testing**: Built-in testing framework for JavaScript MCP server validation
 
 ## Technical Architecture
 
@@ -147,6 +156,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - **Python Runtime**: Pyodide integration with vanilla Python (no external packages)
 - **AI Code Generation**: Simple "write Python code" → execute workflow
 - **Basic UI**: Minimal interface for AI chat, file management, code execution
+- **JavaScript MCP Server Editor**: In-app development environment for creating custom JavaScript MCP servers
 
 **Python Package Support:**
 - **Standard Library Only**: Built-in Python modules (os, sys, json, math, datetime, etc.)
@@ -165,6 +175,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - PWA works offline for classroom/field environments
 - Lighthouse PWA score > 85
 - Basic STEM calculations and visualizations work smoothly on smartphones
+- Users can create and modify simple JavaScript MCP servers for educational purposes
 
 ---
 
@@ -177,6 +188,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - **File Management**: Advanced file operations (folders, import/export)
 - **Python Packages**: Micropip integration for package management
 - **AI Assistance**: Enhanced AI prompts for debugging and optimization
+- **Advanced JavaScript MCP Development**: Enhanced JavaScript MCP server development with debugging tools
 
 **Python Package Support:**
 - **Data Analysis Core**: pandas for data manipulation and analysis
@@ -196,6 +208,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - Terminal supports Python scientific computing environment
 - pandas workflows for experimental data analysis (CSV/JSON scientific datasets)
 - matplotlib visualizations for scientific plots and educational demonstrations
+- Advanced JavaScript MCP server development with debugging and testing capabilities
 
 ---
 
@@ -208,6 +221,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - **Project Templates**: Pre-configured templates for data science, web dev, etc.
 - **AI Debugging**: Intelligent error detection and suggestions
 - **Notebook Interface**: Jupyter-style cells for interactive development
+- **JavaScript MCP Server Marketplace**: Share and discover community-created JavaScript MCP servers
 
 **Python Package Support:**
 - **Advanced Charting**: plotly for interactive charts and dashboards
@@ -228,6 +242,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - Advanced GitHub workflows for research collaboration and peer review
 - Interactive Jupyter-style environment for STEM education
 - Rich scientific visualizations with plotly for research presentations and education
+- Active community marketplace for sharing educational JavaScript MCP servers
 
 ---
 
@@ -241,6 +256,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - **CI/CD Integration**: Automated deployment pipelines through GitHub Actions
 - **Smart Documentation**: AI-generated documentation and comments
 - **WebUSB Integration**: Direct USB device connectivity for smartphone development
+- **AI JavaScript MCP Server Generation**: Automatically generate JavaScript MCP servers based on natural language descriptions
 
 **Python Package Support:**
 - **Mobile USB Interface**: pyusb for USB device communication on smartphones
@@ -260,6 +276,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - Automated testing for scientific computations and educational content
 - Comprehensive STEM development environment accessible on smartphones
 - WebUSB connectivity for laboratory equipment and educational hardware integration
+- AI can generate custom JavaScript MCP servers from natural language descriptions
 
 ---
 
@@ -268,6 +285,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 
 **New Features:**
 - **GCP Cloud Integration**: Google Cloud Platform service integrations
+- **Enterprise JavaScript MCP Server Management**: Advanced JavaScript server deployment, monitoring, and scaling
 
 **Enhanced Features:**
 - **Microservices Architecture**: Scalable, modular server design
@@ -286,6 +304,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 - Support for complete STEM curriculum development and delivery
 - Comprehensive ecosystem with educational content and research tool integrations
 - Industry-leading AI-powered STEM learning and research experience
+- Enterprise-grade JavaScript MCP server deployment and management capabilities
 
 ---
 
