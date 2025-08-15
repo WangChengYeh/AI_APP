@@ -11,7 +11,7 @@ AI_APP is a Progressive Web Application (PWA) forked from [AIAW Lite](https://gi
 - **No Authentication Required**: Zero-friction access without login or registration
 - **Progressive Web App**: Installable web application with offline capabilities
 - **AI Assistant Interface**: Interactive chat interface for AI-powered assistance
-- **Cross-platform Compatibility**: Works on desktop, mobile, and tablet devices
+- **Smartphone-First Design**: Optimized for mobile devices with responsive PWA interface
 - **Privacy-Focused**: Local-first approach with no user data collection
 
 ### Enhanced MCP Server Integrations
@@ -126,7 +126,7 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 
 ## Version Roadmap
 
-### Version 1.0 - MVP Foundation (Q1 2025)
+### Version 1.0 - MVP Foundation (Q3 2025)
 **Core Theme: Basic AI-Powered Development Environment**
 
 **Features:**
@@ -155,7 +155,7 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 
 ---
 
-### Version 2.0 - Enhanced Development Tools (Q2 2025)
+### Version 2.0 - Enhanced Development Tools (Q4 2025)
 **Core Theme: Complete Development Workflow**
 
 **New Features:**
@@ -186,7 +186,7 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 
 ---
 
-### Version 3.0 - Collaboration & Productivity (Q3 2025)
+### Version 3.0 - Collaboration & Productivity (Q1 2026)
 **Core Theme: Team Development and Advanced Features**
 
 **New Features:**
@@ -218,7 +218,7 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 
 ---
 
-### Version 4.0 - AI-Powered Automation (Q4 2025)
+### Version 4.0 - AI-Powered Automation (Q2 2026)
 **Core Theme: Intelligent Development Assistance**
 
 **New Features:**
@@ -227,15 +227,14 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - **Auto-Testing**: Generate and run tests for Python code
 - **CI/CD Integration**: Automated deployment pipelines through GitHub Actions
 - **Smart Documentation**: AI-generated documentation and comments
-- **WebUSB Integration**: Direct hardware device connectivity for IoT development
+- **WebUSB Integration**: Direct USB device connectivity for smartphone development
 
 **Python Package Support:**
-- **Hardware Interface**: pyserial for serial communication with devices
-- **IoT Development**: micropython compatibility for embedded systems
-- **Sensor Libraries**: adafruit-circuitpython packages for sensors
-- **Protocol Support**: USB, I2C, SPI communication protocols
-- **Device Automation**: Control Arduino, Raspberry Pi, and other microcontrollers
-- **Real-time Data**: Live sensor data streaming and visualization
+- **Mobile USB Interface**: pyusb for USB device communication on smartphones
+- **Smartphone Sensors**: Access accelerometer, gyroscope, GPS via device APIs
+- **USB Protocol Support**: USB-only communication (no I2C, SPI dependencies)
+- **Mobile Device Control**: Interface with USB-connected sensors and devices
+- **Real-time Data**: Live USB sensor data streaming optimized for mobile
 
 **Enhanced Features:**
 - **Advanced AI Models**: Integration with latest LLMs for code generation
@@ -247,11 +246,11 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - AI can autonomously improve code quality and performance
 - Automated testing and deployment workflows
 - Comprehensive development environment rivaling desktop IDEs
-- WebUSB hardware connectivity for IoT and embedded development
+- WebUSB connectivity for smartphone-based USB device development
 
 ---
 
-### Version 5.0 - Enterprise & Ecosystem (Q1 2026)
+### Version 5.0 - Enterprise & Ecosystem (Q3 2026)
 **Core Theme: Production-Ready Platform**
 
 **New Features:**
@@ -292,11 +291,11 @@ Each version builds incrementally on the previous version's foundation:
 **v4.0 → v5.0**: Scale to enterprise platform with multi-language support
 
 ### Timeline Considerations
-- **Q1 2025**: Foundation and MVP
-- **Q2 2025**: Core development tools
-- **Q3 2025**: Collaboration features
-- **Q4 2025**: AI automation
-- **Q1 2026**: Enterprise platform
+- **Q3 2025**: Foundation and MVP
+- **Q4 2025**: Core development tools
+- **Q1 2026**: Collaboration features
+- **Q2 2026**: AI automation
+- **Q3 2026**: Enterprise platform
 
 ### Backward Compatibility
 Each version maintains backward compatibility with previous versions, ensuring smooth upgrades and migrations for existing users.
