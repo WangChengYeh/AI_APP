@@ -2,7 +2,15 @@
 
 ## Overview
 
-AI_APP is a Progressive Web Application (PWA) forked from [AIAW Lite](https://github.com/modelcontextprotocol/awesome-mcp), a lightweight open-source Model Context Protocol (MCP) client with no login requirements. This enhanced version extends the original AIAW Lite capabilities with specialized MCP servers for web-based development workflows.
+AI_APP is a Progressive Web Application (PWA) forked from [AIAW Lite](https://github.com/modelcontextprotocol/awesome-mcp), a lightweight open-source Model Context Protocol (MCP) client with no login requirements. This enhanced version extends the original AIAW Lite capabilities with specialized MCP servers for **STEM education and development workflows**.
+
+**Target Users: STEM Mobile Learning & Development**
+- **Science**: Data analysis, statistical modeling, scientific computing on smartphones
+- **Technology**: Mobile app development, IoT prototyping, hardware interfacing via USB
+- **Engineering**: CAD scripting, simulation analysis, engineering calculations
+- **Mathematics**: Mathematical modeling, algorithm visualization, computational mathematics
+
+The app transforms smartphones into powerful STEM development environments, enabling students, educators, and professionals to code, analyze data, and interface with USB devices directly from their mobile devices.
 
 ## Core Features
 
@@ -83,51 +91,55 @@ AI_APP is a Progressive Web Application (PWA) forked from [AIAW Lite](https://gi
 
 ## Usage Scenarios
 
-### AI-Powered Code Generation & Execution
-**Example: "Write a Python code to simulate the world"**
+### STEM-Focused AI-Powered Development
+**Example: "Create a physics simulation for projectile motion"**
 
-**Workflow:**
-1. **Human Input**: User types command in CLI interface: `"write a Python code to simulate the world"`
-2. **AI Code Generation**: AI assistant generates Python code based on the request
-3. **File Storage**: Code automatically saved to PWA local file system via MCP File System server
-4. **Code Execution**: Python code runs in browser using Pyodide MCP server
-5. **Result Display**: Simulation output and visualizations displayed in the interface
+**STEM Workflow:**
+1. **Student/Educator Input**: `"Create a physics simulation showing projectile motion with different angles"`
+2. **AI STEM Code Generation**: AI generates Python code with physics equations and matplotlib visualization
+3. **Mobile File Storage**: Code saved to smartphone's PWA file system
+4. **On-Device Execution**: Physics simulation runs directly on smartphone via Pyodide
+5. **Interactive Results**: Real-time physics visualization with adjustable parameters
 
 **Technical Flow:**
 ```
-CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Execution → PWA Terminal (optional commands) → Result Output
+STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interactive STEM Visualization
 ```
 
-**Benefits:**
-- Zero setup time - no Python installation needed
-- Immediate feedback and iteration
-- Persistent code storage in browser
-- Shareable via GitHub integration
+**STEM Benefits:**
+- **Science**: Instant scientific simulations and data analysis
+- **Technology**: No-setup mobile development environment
+- **Engineering**: Quick prototyping and calculation tools
+- **Mathematics**: Visual math concepts and algorithm exploration
+- **Accessibility**: STEM tools available on any smartphone, anywhere
 
-### Web Development Workflow
-1. Create and manage project files using PWA File System
-2. Initialize or connect to GitHub repository
-3. Write and test Python scripts using Pyodide
-4. Commit and push changes via GitHub integration
-5. Collaborate with team members through version control
+### STEM Education Workflows
 
-### Data Science Projects
-1. Import datasets through file system
-2. Analyze data using Python libraries in Pyodide
-3. Create visualizations and reports
-4. Version control notebooks and scripts
-5. Share results via GitHub
+#### Science Research & Analysis
+1. **Data Collection**: Import experimental data via USB sensors or CSV files
+2. **Statistical Analysis**: Use pandas and numpy for scientific data processing
+3. **Hypothesis Testing**: Run statistical tests and generate research-quality plots
+4. **Publication**: Export results and share via GitHub for peer review
+5. **Collaboration**: Work with research teams on shared STEM projects
 
-### Prototyping & Experimentation
-1. Rapid file creation and editing
-2. Instant Python code execution
-3. Version control for experimental code
-4. Cross-device accessibility
+#### Technology & Engineering Projects
+1. **Mobile Prototyping**: Develop and test algorithms directly on smartphone
+2. **USB Device Integration**: Interface with sensors, microcontrollers via WebUSB
+3. **Real-time Monitoring**: Stream data from connected devices for analysis
+4. **Documentation**: Generate technical reports and share via version control
+5. **Iteration**: Rapid prototype-test-refine cycles on mobile platform
+
+#### Mathematics Education & Research
+1. **Algorithm Visualization**: Create interactive mathematical concepts
+2. **Computational Mathematics**: Solve complex equations and numerical methods
+3. **Graph Theory**: Visualize mathematical relationships and structures
+4. **Teaching Tools**: Educators create interactive math demonstrations
+5. **Student Projects**: Mathematical modeling and simulation assignments
 
 ## Version Roadmap
 
 ### Version 1.0 - MVP Foundation (Q3 2025)
-**Core Theme: Basic AI-Powered Development Environment**
+**Core Theme: Basic STEM Mobile Development Environment**
 
 **Features:**
 - **AIAW Lite Integration**: Fork and adapt base MCP client
@@ -149,14 +161,15 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - Core test suite (unit tests)
 
 **Success Criteria:**
-- User can input AI prompt → generate Python code → save file → execute code
-- PWA works offline with cached assets
+- STEM users can input educational prompts → generate scientific Python code → execute on mobile
+- PWA works offline for classroom/field environments
 - Lighthouse PWA score > 85
+- Basic STEM calculations and visualizations work smoothly on smartphones
 
 ---
 
-### Version 2.0 - Enhanced Development Tools (Q4 2025)
-**Core Theme: Complete Development Workflow**
+### Version 2.0 - Enhanced STEM Tools (Q4 2025)
+**Core Theme: Complete STEM Analysis Workflow**
 
 **New Features:**
 - **PWA Terminal**: Full xterm.js integration with command execution
@@ -179,15 +192,15 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - **Performance**: Optimized Pyodide loading and memory management
 
 **Success Criteria:**
-- Complete workflow: AI generates code → save to GitHub → execute locally
-- Terminal supports basic shell commands and Python environment
-- pandas data analysis workflows with CSV/JSON file processing
-- Basic matplotlib visualizations for data exploration
+- Complete STEM workflow: AI generates scientific code → save to GitHub → execute on mobile
+- Terminal supports Python scientific computing environment
+- pandas workflows for experimental data analysis (CSV/JSON scientific datasets)
+- matplotlib visualizations for scientific plots and educational demonstrations
 
 ---
 
-### Version 3.0 - Collaboration & Productivity (Q1 2026)
-**Core Theme: Team Development and Advanced Features**
+### Version 3.0 - STEM Collaboration & Advanced Visualization (Q1 2026)
+**Core Theme: STEM Team Projects and Interactive Learning**
 
 **New Features:**
 - **Real-time Collaboration**: Multi-user file editing and sharing
@@ -211,15 +224,15 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - **Mobile Optimization**: Enhanced mobile PWA experience
 
 **Success Criteria:**
-- Teams can collaboratively develop Python projects
-- Advanced GitHub workflows (PR creation, code review)
-- Interactive notebook-style development environment
-- Rich interactive charts with plotly and advanced visualization capabilities
+- STEM teams can collaboratively develop scientific projects
+- Advanced GitHub workflows for research collaboration and peer review
+- Interactive Jupyter-style environment for STEM education
+- Rich scientific visualizations with plotly for research presentations and education
 
 ---
 
-### Version 4.0 - AI-Powered Automation (Q2 2026)
-**Core Theme: Intelligent Development Assistance**
+### Version 4.0 - STEM Hardware Integration & AI Automation (Q2 2026)
+**Core Theme: Intelligent STEM Development with Hardware Connectivity**
 
 **New Features:**
 - **AI Code Review**: Automatic code analysis and improvement suggestions
@@ -243,15 +256,15 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - **Plugin Architecture**: Third-party extensions and integrations
 
 **Success Criteria:**
-- AI can autonomously improve code quality and performance
-- Automated testing and deployment workflows
-- Comprehensive development environment rivaling desktop IDEs
-- WebUSB connectivity for smartphone-based USB device development
+- AI can autonomously improve STEM code quality and suggest scientific optimizations
+- Automated testing for scientific computations and educational content
+- Comprehensive STEM development environment accessible on smartphones
+- WebUSB connectivity for laboratory equipment and educational hardware integration
 
 ---
 
-### Version 5.0 - Enterprise & Ecosystem (Q3 2026)
-**Core Theme: Production-Ready Platform**
+### Version 5.0 - STEM Education Ecosystem (Q3 2026)
+**Core Theme: Complete STEM Learning & Research Platform**
 
 **New Features:**
 - **Multi-Language Support**: JavaScript, TypeScript, Go, Rust runtimes
@@ -273,10 +286,10 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - **SLA & Support**: Enterprise-grade reliability and support
 
 **Success Criteria:**
-- Production-ready platform for enterprise development teams
-- Support for full software development lifecycle
-- Comprehensive ecosystem with third-party integrations
-- Industry-leading AI-powered development experience
+- Production-ready platform for STEM education institutions and research teams
+- Support for complete STEM curriculum development and delivery
+- Comprehensive ecosystem with educational content and research tool integrations
+- Industry-leading AI-powered STEM learning and research experience
 
 ---
 
