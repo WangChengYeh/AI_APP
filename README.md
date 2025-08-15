@@ -267,11 +267,7 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 **Core Theme: Complete STEM Learning & Research Platform**
 
 **New Features:**
-- **Multi-Language Support**: JavaScript, TypeScript, Go, Rust runtimes
-- **Advanced Collaboration**: Video calls, screen sharing, pair programming
-- **Enterprise Features**: SSO, team management, usage analytics
-- **Cloud Integration**: AWS, GCP, Azure service integrations
-- **Advanced AI**: Custom model training, domain-specific assistants
+- **GCP Cloud Integration**: Google Cloud Platform service integrations
 
 **Enhanced Features:**
 - **Microservices Architecture**: Scalable, modular server design
