@@ -147,6 +147,32 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 
 ## Version Roadmap
 
+### Concept Proof Phase - WebAssembly Foundation (August 2025)
+**Core Theme: Validate Core Technologies on Mobile**
+
+**Features:**
+- **Python WebAssembly Runtime**: Pyodide integration for Python execution in browser
+- **Shell WebAssembly Environment**: Basic shell commands running in WebAssembly
+- **Terminal WebAssembly Interface**: xterm.js with WebAssembly backend integration
+- **Mobile PWA Validation**: Ensure all WebAssembly components work on smartphones
+- **Performance Benchmarking**: Measure execution speed and memory usage on mobile devices
+
+**Technical Deliverables:**
+- WebAssembly-based Python interpreter running on smartphones
+- Basic shell environment (ls, cat, echo, mkdir) via WebAssembly
+- Terminal interface with real command execution
+- Performance metrics and mobile compatibility report
+- Proof-of-concept PWA installable on iOS and Android
+
+**Success Criteria:**
+- Python code execution < 2 seconds startup time on smartphones
+- Basic shell commands functional in mobile browser environment
+- Terminal responsive and usable on touch interfaces
+- WebAssembly modules load and execute reliably across mobile browsers
+- PWA installation successful on major mobile platforms
+
+---
+
 ### Version 1.0 - MVP Foundation (Q3 2025)
 **Core Theme: Basic STEM Mobile Development Environment**
 
@@ -313,12 +339,14 @@ STEM Query → AI STEM Code → Mobile Storage → On-Device Python → Interact
 ### Implementation Strategy
 Each version builds incrementally on the previous version's foundation:
 
+**Concept Proof → v1.0**: Validate WebAssembly technologies, then build STEM-focused features
 **v1.0 → v2.0**: Add terminal and GitHub integration to complete core workflow
 **v2.0 → v3.0**: Focus on collaboration features and advanced development tools  
 **v3.0 → v4.0**: Integrate AI automation and intelligent development assistance
 **v4.0 → v5.0**: Scale to enterprise platform with multi-language support
 
 ### Timeline Considerations
+- **August 2025**: WebAssembly concept proof phase
 - **Q3 2025**: Foundation and MVP
 - **Q4 2025**: Core development tools
 - **Q1 2026**: Collaboration features
@@ -329,6 +357,22 @@ Each version builds incrementally on the previous version's foundation:
 Each version maintains backward compatibility with previous versions, ensuring smooth upgrades and migrations for existing users.
 
 ## Implementation Survey & Integration Requirements
+
+### MCP Server Development Resources
+
+**Official MCP Documentation & Specifications:**
+- **MCP Protocol Specification**: [https://spec.modelcontextprotocol.io/](https://spec.modelcontextprotocol.io/)
+- **MCP SDK (TypeScript/JavaScript)**: [https://github.com/modelcontextprotocol/typescript-sdk](https://github.com/modelcontextprotocol/typescript-sdk)
+- **MCP Server Examples**: [https://github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers)
+
+**Community MCP Server Collections:**
+- **Awesome MCP Servers**: [https://github.com/punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)
+- **MCP Server Registry**: [https://github.com/modelcontextprotocol/awesome-mcp-servers](https://github.com/modelcontextprotocol/awesome-mcp-servers)
+
+**STEM-Focused MCP Server Templates (AI_APP Specific):**
+- **Educational MCP Servers**: Templates for scientific data analysis, mathematical modeling
+- **Hardware Interface Servers**: WebUSB integration for laboratory equipment
+- **Data Visualization Servers**: Interactive chart and graph generation for STEM education
 
 ### Base Architecture - AIAW Lite
 **Leveraged Code:**
@@ -616,7 +660,10 @@ name: AI_APP CI/CD
 on: [push, pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js
@@ -670,6 +717,8 @@ This project is licensed under the same terms as the original AIAW Lite project.
 ## Acknowledgments
 
 - Original AIAW Lite project maintainers and contributors
-- Model Context Protocol specification authors
+- Model Context Protocol specification authors ([MCP Specification](https://spec.modelcontextprotocol.io/))
+- MCP TypeScript SDK developers ([MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk))
+- Community MCP server developers ([Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers))
 - Pyodide development team
 - GitHub API documentation and tools
