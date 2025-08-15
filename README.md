@@ -146,6 +146,134 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - [ ] CI/CD pipeline integration
 - [ ] Plugin architecture for extensibility
 
+## Implementation Survey & Integration Requirements
+
+### Base Architecture - AIAW Lite
+**Leveraged Code:**
+- **Repository**: `NitroRCr/AIaW` (AI as Workspace)
+- **Framework**: Vue.js + Quasar framework for cross-platform PWA
+- **Build System**: Quasar CLI with Electron support
+- **MCP Support**: Built-in MCP protocol implementation (v1.4+)
+  - STDIO type MCP servers (npx/uvx local execution)
+  - SSE type MCP servers (cross-platform)
+  - JSON manifest plugin configuration
+
+**Integration Needed:**
+- Fork and adapt Quasar-based PWA architecture
+- Strip desktop Electron features for pure PWA
+- Enhance MCP client for additional server types
+- Implement plugin system for custom MCP servers
+
+### (A) PWA File System MCP Server
+**Leveraged Technologies:**
+- **Storage**: IndexedDB as primary structured data storage
+- **File API**: Origin Private File System Access API
+- **Libraries**: 
+  - `use-strict/file-system-access` - File System Access API ponyfill
+  - IndexedDB Promised library for cleaner async syntax
+  - LocalForage or PouchDB for high-level storage abstractions
+
+**Integration Needed:**
+- MCP server wrapper for File System Access API
+- Virtual file system using IndexedDB backend
+- File upload/download interfaces
+- Persistent storage management (navigator.storage.persist())
+- CRUD operations mapping to MCP protocol
+
+### (B) GitHub Version Control MCP Server  
+**Leveraged Technologies:**
+- **Authentication**: GitHub OAuth 2.0 flow
+- **API Client**: GitHub REST API v4 / GraphQL API v4
+- **Libraries**:
+  - `oauth4webapi` - Modern OAuth 2 client for JavaScript
+  - `@octokit/rest` - GitHub REST API client
+  - Firebase Auth SDK (alternative OAuth provider)
+
+**Integration Needed:**
+- OAuth callback handling in PWA environment
+- MCP server wrapper for GitHub API operations
+- Repository operations (clone, commit, push, pull)
+- Branch management and merge operations
+- Token storage and refresh management
+- PWA-specific callback URL configuration
+
+### (C) Pyodide (Python on Web) MCP Server
+**Leveraged Technologies:**
+- **Runtime**: Pyodide v0.28.1 (latest stable)
+- **Features**: 
+  - JavaScript Promise Integration (JSPI) - Stage 4 standard
+  - WebAssembly-based CPython implementation
+  - Scientific packages: NumPy, pandas, SciPy, matplotlib
+- **Performance**: WebWorker isolation for non-blocking execution
+
+**Integration Needed:**
+- MCP server wrapper for Pyodide runtime
+- Python code execution engine
+- Package management via micropip
+- Output capture and streaming
+- Error handling and debugging support
+- Memory management and cleanup
+- Async/await bridge between Python and JavaScript
+
+### (D) PWA Terminal MCP Server
+**Leveraged Technologies:**
+- **Terminal Emulator**: xterm.js v5.3.0+
+- **Communication**: WebSocket for real-time I/O
+- **Backend**: Node-pty for pseudo-terminal spawning
+- **Features**:
+  - Full xterm terminal compatibility
+  - Session management and persistence
+  - Terminal resizing and responsive design
+
+**Integration Needed:**
+- MCP server wrapper for terminal operations
+- Browser-based pseudo-terminal implementation
+- Command execution sandbox environment
+- Process management within browser constraints
+- WebWorker-based terminal backend
+- Terminal session persistence and recovery
+- Security isolation for safe command execution
+
+### Cross-Integration Requirements
+**MCP Protocol Extensions:**
+- Custom resource types for file operations
+- Tool definitions for terminal commands
+- Prompt templates for AI-assisted operations
+- Error handling across all server types
+
+**PWA-Specific Adaptations:**
+- Service Worker integration for offline capabilities
+- Web App Manifest for installability
+- Responsive design for mobile/desktop compatibility
+- Storage quota management across all components
+
+**Security Considerations:**
+- Sandboxed execution environments
+- CORS configuration for cross-origin requests
+- Secure token storage and management
+- Input validation and sanitization
+
+### Development Environment Setup
+**Required Dependencies:**
+```json
+{
+  "dependencies": {
+    "@quasar/framework": "^2.x",
+    "vue": "^3.x",
+    "pyodide": "^0.28.1",
+    "xterm": "^5.3.0",
+    "oauth4webapi": "^2.x",
+    "@octokit/rest": "^20.x",
+    "localforage": "^1.10.0"
+  }
+}
+```
+
+**Build Tools:**
+- Quasar CLI for PWA development and building
+- Service Worker generation for offline support
+- WebAssembly optimization for Pyodide integration
+
 ## Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
