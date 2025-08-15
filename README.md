@@ -132,9 +132,15 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 **Features:**
 - **AIAW Lite Integration**: Fork and adapt base MCP client
 - **PWA File System**: Basic file CRUD operations with IndexedDB storage
-- **Python Runtime**: Pyodide integration with code execution
+- **Python Runtime**: Pyodide integration with vanilla Python (no external packages)
 - **AI Code Generation**: Simple "write Python code" → execute workflow
 - **Basic UI**: Minimal interface for AI chat, file management, code execution
+
+**Python Package Support:**
+- **Standard Library Only**: Built-in Python modules (os, sys, json, math, datetime, etc.)
+- **Core Language Features**: Variables, functions, classes, control structures
+- **Basic Data Types**: strings, lists, dictionaries, sets, tuples
+- **No External Dependencies**: Focus on pure Python learning and simple algorithms
 
 **Technical Deliverables:**
 - PWA installable with service worker
@@ -159,6 +165,13 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - **Python Packages**: Micropip integration for package management
 - **AI Assistance**: Enhanced AI prompts for debugging and optimization
 
+**Python Package Support:**
+- **Data Analysis Core**: pandas for data manipulation and analysis
+- **Numerical Computing**: numpy for mathematical operations
+- **File Processing**: CSV, Excel, JSON data file handling
+- **Basic Visualization**: Simple matplotlib plots for data exploration
+- **Data Import/Export**: Support for common data formats (CSV, JSON, XML)
+
 **Enhanced Features:**
 - **Multi-file Projects**: Support for project structures and dependencies
 - **Syntax Highlighting**: Code editor with Python syntax highlighting
@@ -168,7 +181,8 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 **Success Criteria:**
 - Complete workflow: AI generates code → save to GitHub → execute locally
 - Terminal supports basic shell commands and Python environment
-- Support for popular Python packages (numpy, pandas, matplotlib)
+- pandas data analysis workflows with CSV/JSON file processing
+- Basic matplotlib visualizations for data exploration
 
 ---
 
@@ -182,6 +196,14 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - **AI Debugging**: Intelligent error detection and suggestions
 - **Notebook Interface**: Jupyter-style cells for interactive development
 
+**Python Package Support:**
+- **Advanced Charting**: plotly for interactive charts and dashboards
+- **Statistical Visualization**: seaborn for statistical data visualization
+- **Scientific Plotting**: scipy for scientific and engineering plots
+- **Geospatial Charts**: folium for interactive maps and geographic data
+- **3D Visualization**: matplotlib 3D plotting capabilities
+- **Chart Export**: SVG, PNG, PDF export for presentations and reports
+
 **Enhanced Features:**
 - **Advanced Terminal**: Session persistence, multi-tab support, SSH connections
 - **Package Ecosystem**: Support for complex dependencies and virtual environments
@@ -192,6 +214,7 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - Teams can collaboratively develop Python projects
 - Advanced GitHub workflows (PR creation, code review)
 - Interactive notebook-style development environment
+- Rich interactive charts with plotly and advanced visualization capabilities
 
 ---
 
@@ -204,6 +227,15 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - **Auto-Testing**: Generate and run tests for Python code
 - **CI/CD Integration**: Automated deployment pipelines through GitHub Actions
 - **Smart Documentation**: AI-generated documentation and comments
+- **WebUSB Integration**: Direct hardware device connectivity for IoT development
+
+**Python Package Support:**
+- **Hardware Interface**: pyserial for serial communication with devices
+- **IoT Development**: micropython compatibility for embedded systems
+- **Sensor Libraries**: adafruit-circuitpython packages for sensors
+- **Protocol Support**: USB, I2C, SPI communication protocols
+- **Device Automation**: Control Arduino, Raspberry Pi, and other microcontrollers
+- **Real-time Data**: Live sensor data streaming and visualization
 
 **Enhanced Features:**
 - **Advanced AI Models**: Integration with latest LLMs for code generation
@@ -215,6 +247,7 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - AI can autonomously improve code quality and performance
 - Automated testing and deployment workflows
 - Comprehensive development environment rivaling desktop IDEs
+- WebUSB hardware connectivity for IoT and embedded development
 
 ---
 
