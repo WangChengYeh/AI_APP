@@ -39,12 +39,12 @@ AI_APP is a Progressive Web Application (PWA) forked from [AIAW Lite](https://gi
 - **Jupyter Integration**: Notebook-style interface for Python development
 - **File System Integration**: Seamless integration with PWA file system
 
-#### (D) Web Shell MCP Server
-- **Browser-based Terminal**: Virtual shell environment running in PWA
-- **Command Execution**: Execute shell commands within browser sandbox
+#### (D) PWA Terminal MCP Server
+- **Browser-based Terminal**: Virtual terminal environment running in PWA
+- **Command Execution**: Execute terminal commands within browser sandbox
 - **Process Management**: Start, monitor, and terminate processes
-- **Environment Variables**: Manage shell environment and PATH
-- **Script Execution**: Run shell scripts (.sh, .bat) and command sequences
+- **Environment Variables**: Manage terminal environment and PATH
+- **Script Execution**: Run terminal scripts (.sh, .bat) and command sequences
 - **Output Streaming**: Real-time command output and error handling
 - **Security Isolation**: Sandboxed execution environment for safety
 
@@ -95,7 +95,7 @@ AI_APP is a Progressive Web Application (PWA) forked from [AIAW Lite](https://gi
 
 **Technical Flow:**
 ```
-CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Execution → Web Shell (optional commands) → Result Output
+CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Execution → PWA Terminal (optional commands) → Result Output
 ```
 
 **Benefits:**
@@ -131,12 +131,12 @@ CLI Input → AI Processing → PWA File System (save .py file) → Pyodide Exec
 - [ ] PWA File System MCP server implementation
 - [ ] Basic GitHub integration
 - [ ] Pyodide runtime integration
-- [ ] Web Shell MCP server implementation
+- [ ] PWA Terminal MCP server implementation
 
 ### Phase 2: Enhanced Features
 - [ ] Advanced GitHub operations (PR management, issues)
 - [ ] Python package management
-- [ ] Shell script automation and scheduling
+- [ ] Terminal script automation and scheduling
 - [ ] File synchronization between servers
 - [ ] Performance optimizations
 
